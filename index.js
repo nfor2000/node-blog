@@ -1,9 +1,7 @@
 import fs from "fs";
 import http from "http";
 import path from "path";
-import dotenv from "dotenv";
 
-dotenv.config("./.env")
 
 import { getPosts, addPost, removePostById, getPostById } from "./routes/post.js";
 const server = http.createServer();
