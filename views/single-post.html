@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>single post</title>
+     <link rel="stylesheet" href="/css/index.css">
+</head>
+
+<body class="min-h-screen bg-zinc-100 flex flex-col">
+     <header class="sticky top-0 left-0">
+          <section class="max-w-5xl mx-auto bg-white p-5 flex items-center justify-between border-b">
+               <a href="/">
+                    <span
+                         class="block w-12 h-12 rounded bg-black font-semibold text-white text-2xl text-center leading-[48px]">B
+                    </span>
+               </a>
+               <nav>
+                    <ul class="flex gap-10">
+                         <li><a href="/" class="text-sm text-slate-500 hover:text-black active:text-black">Home</a></li>
+                         <li><a href="/posts.html"
+                                   class="text-sm text-slate-500 hover:text-black active:text-black">Posts</a></li>
+                         <li><a href="/create.html"
+                                   class="text-sm text-slate-500 hover:text-black active:text-black">Create Posts</a>
+                         </li>
+                    </ul>
+               </nav>
+          </section>
+     </header>
+     <main class="flex-1 bg-white max-w-5xl mx-auto w-full pt-24 px-5">
+          <section class="max-w-md mx-auto flex-1 text-center">
+               <a href="/posts.html"
+                    class="bg-black text-white font-bold py-3 px-5 border border-black hover:bg-transparent hover:text-black transition-all text-base rounded mb-5 block w-max">Go
+                    Back</a>
+
+               <div id="post-container">
+                    <div id="loader" class="w-10 h-10 rounded-full border-t-2 animate-spin border-slate-700 mx-auto">
+                    </div>
+               </div>
+
+          </section>
+     </main>
+     <footer class="mt-auto">
+          <div class="text-center mx-auto max-w-5xl bg-white border-t p-5 text-slate-700 text-sm">&copy;copyright Nfor
+               Presly
+               <span id="year"></span>. All rights
+               reserved
+          </div>
+     </footer>
+     <script src="/js/single-post.js"></script>
+     <script src="/js/index.js"></script>
+</body>
+
+</html>
