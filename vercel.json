@@ -5,6 +5,6 @@
     { "src": "/posts", "dest": "/posts.html" },
     { "src": "/post", "dest": "/post.html" },
     { "src": "/create", "dest": "/create.html" },
-    { "src": "/(.*)", "dest": "/index.html" }
+    { "src": "/(.*)", "dest": "/" }
   ]
    }
