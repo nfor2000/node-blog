@@ -1,14 +1,14 @@
 const postsContainer = document.getElementById("post-container")
 const loader = document.getElementById("loader")
 
-fetch('/posts')
+fetch('/getposts')
      .then(res => res.json())
      .then(data => {
           if (data.length > 0) {
                data.forEach(post => {
                     const postElem = document.createElement("article")
                     postElem.className = "text-center mb-3"
-                    postElem.innerHTML = `<h2 class="text-xl font-bold"><a href="/single-post.html?id=${post.id}" class="hover:underline">${post.title}</a></h2>
+                    postElem.innerHTML = `<h2 class="text-xl font-bold"><a href="/post?id=${post.id}" class="hover:underline">${post.title}</a></h2>
                                    <p class="text-sm max-w-sm  mx-auto whitespace-nowrap overflow-ellipsis overflow-hidden"> ${post.body}</p>
                                    <span class="text-xs text-gray-500">${formatDate(post.date)}</span>
                                             `

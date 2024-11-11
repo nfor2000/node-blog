@@ -48,16 +48,17 @@ server.on("request", async (req, res) => {
                     break;
           }
 
-          const filePath = contentType === "text/html" && (req.url === "/" || req.url.slice(-1) === "/") ?
+          let filePath = contentType === "text/html" && (req.url === "/" || req.url.slice(-1) === "/") ?
                path.join(__dirname, "views", "index.html") :
                contentType === "text/html" ?
                     path.join(__dirname, "views", req.url) :
                     path.join(__dirname, "public", req.url);
 
+          if (!ext && req.url.slice(-1) !== '/') filePath += '.html';
           if (contentType && fs.existsSync(filePath)) {
                serveFiles(filePath, contentType, res);
           } else {
-               if (req.url === "/posts") {
+               if (req.url === "/getposts") {
                     res.writeHead(200, { "Content-Type": "application/json" });
                     const posts = await getPosts();
                     res.end(JSON.stringify(posts));
